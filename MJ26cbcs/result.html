@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=980"/>
+  <title>VTU Result - 1AY23CS259</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:Arial,sans-serif;
+      background:#e0e0e0;
+      min-height:100vh;
+      font-size:13px;
+    }
+
+    .wrap{
+      max-width:420px;
+      margin:0 auto;
+      background:#e0e0e0;
+    }
+
+    /* HEADER */
+    .header{
+      background:#4f4f4f;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:6px 10px;
+      gap:4px;
+    }
+    .header-left{
+      font-size:11.5px;line-height:1.5;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      flex:1;
+    }
+    .header-logo{
+      width:52px;height:52px;
+      object-fit:contain;flex-shrink:0;
+    }
+    .header-right{
+      font-size:11px;text-align:right;
+      line-height:1.5;font-weight:bold;flex:1;
+    }
+
+    /* BANNERS */
+    .banner-orange{
+      background:#e8956d;
+      text-align:center;padding:6px 8px;
+      font-size:13px;font-weight:bold;color:#111;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      line-height:1.5;
+    }
+    .banner-green{
+      background:#6aaa6a;
+      text-align:center;padding:5px 8px;
+      font-size:11px;color:#111;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      line-height:1.6;
+    }
+
+    /* RESULT BODY */
+    .result-body{
+      background:#fff;
+      margin:8px 8px;
+      padding:10px 10px 14px;
+      border:1px solid #ccc;
+      border-radius:3px;
+    }
+
+    /* Title */
+    .result-title{
+      text-align:center;
+      font-size:13.5px;
+      font-weight:bold;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      margin-bottom:2px;
+    }
+    .result-subtitle{
+      text-align:center;
+      font-size:12.5px;
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+
+    /* inner green banner */
+    .inner-green{
+      background:#6aaa6a;
+      padding:5px 8px;
+      font-size:10.5px;
+      color:#111;
+      margin-bottom:10px;
+      line-height:1.6;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+
+    /* Student info */
+    .sinfo{margin-bottom:10px;}
+    .sinfo table{width:100%;border-collapse:collapse;}
+    .sinfo td{padding:3px 2px;font-size:12px;vertical-align:top;}
+    .sinfo td:first-child{font-weight:bold;width:48%;}
+
+    /* Semester label */
+    .sem-label{
+      text-align:center;
+      font-weight:bold;
+      font-size:12px;
+      padding:4px;
+      border:1px solid #bbb;
+      background:#f0f0f0;
+      margin-bottom:0;
+    }
+
+    /* Marks table */
+    .marks-table{
+      width:100%;
+      border-collapse:collapse;
+      margin-bottom:10px;
+      font-size:10.5px;
+    }
+    .marks-table th{
+      background:#e8e8e8;
+      border:1px solid #bbb;
+      padding:4px 3px;
+      text-align:center;
+      font-size:10px;
+      font-weight:bold;
+      line-height:1.3;
+    }
+    .marks-table td{
+      border:1px solid #bbb;
+      padding:4px 3px;
+      text-align:center;
+      vertical-align:top;
+      line-height:1.3;
+    }
+    .marks-table td.subname{text-align:left;}
+    .marks-table tr:nth-child(even){background:#fafafa;}
+    .pass{color:#1a7a1a;font-weight:bold;}
+
+    /* Abbreviations */
+    .abbr-section{
+      border:1px solid #bbb;
+      margin:8px 0;font-size:10.5px;
+    }
+    .abbr-header{
+      background:#6aaa6a;
+      text-align:center;padding:4px;
+      font-weight:bold;font-size:11px;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+    .abbr-row{
+      display:flex;flex-wrap:wrap;
+      border-top:1px solid #bbb;background:#fff;
+    }
+    .abbr-item{
+      flex:1;min-width:70px;
+      text-align:center;padding:4px 2px;
+      border-right:1px solid #bbb;
+      font-size:9.5px;
+    }
+    .abbr-item:last-child{border-right:none;}
+
+    /* Notes */
+    .notes{padding:6px 2px;font-size:10.5px;color:#333;line-height:1.6;}
+    .notes p{margin-bottom:3px;}
+
+    /* Signature */
+    .signature{
+      text-align:right;
+      padding:14px 4px 6px;
+      font-size:12px;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      color:#111;line-height:1.7;
+    }
+
+    /* Action buttons */
+    .action-btns{display:flex;gap:0;margin-top:0;}
+    .btn-back{
+      flex:1;background:#e06060;color:#fff;
+      border:none;padding:11px;font-size:13px;
+      cursor:pointer;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+    .btn-print{
+      flex:1;background:#4caf50;color:#fff;
+      border:none;padding:11px;font-size:13px;
+      cursor:pointer;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+
+    /* Footer */
+    .footer{
+      background:#4f4f4f;color:#ccc;
+      text-align:center;padding:7px 8px;
+      font-size:10px;line-height:1.7;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      margin-top:6px;
+    }
+
+    @media print{
+      .action-btns,.footer{display:none;}
+      body{background:#fff;}
+      .wrap{max-width:100%;}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">ವಿಶ್ವೇಶ್ವರಯ್ಯ ತಾಂತ್ರಿಕ ವಿಶ್ವವಿದ್ಯಾಲಯ<br>ಬೆಳಗಾವಿ.</div>
+    <img class="header-logo" src="https://upload.wikimedia.org/wikipedia/en/b/b3/VTU_logo.png" alt="VTU Logo"/>
+    <div class="header-right">VISVESVARAYA TECHNOLOGICAL UNIVERSITY<br>BELAGAVI.</div>
+  </div>
+
+  <!-- ORANGE BANNER -->
+  <div class="banner-orange">
+    ವಿ.ತಾ.ವಿ ಸಾಮಯಿಕ ಫಲಿತಾಂಶ.<br>VTU PROVISIONAL RESULT.
+  </div>
+
+  <!-- GREEN BANNER -->
+  <div class="banner-green">
+    📋 ವಿ.ತಾ.ವಿ ಪದವಿ / ಸ್ನಾತಕೋತ್ತರ ಪದವಿ ಪರೀಕ್ಷೆಯ ಸಾಮಯಿಕ ಫಲಿತಾಂಶ ಮಾರ್ಚ್-2026 / ಏಪ್ರಿಲ್-2026.<br>
+    VTU PROVISIONAL RESULTS OF UG / PG MARCH-2026 / APRIL-2026 EXAMINATION.
+  </div>
+
+  <!-- RESULT BODY -->
+  <div class="result-body">
+
+    <!-- Student Info -->
+    <div class="sinfo">
+      <table>
+        <tr>
+          <td>University Seat Number</td>
+          <td>: <strong>1AY23CS259</strong></td>
+        </tr>
+        <tr>
+          <td>Student Name</td>
+          <td>: <strong>C B SHREYAS PRABHU</strong></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ===== SEMESTER 8 ===== -->
+    <div class="sem-label">Semester : 8</div>
+    <table class="marks-table">
+      <thead>
+        <tr>
+          <th>Subject<br>Code</th>
+          <th>Subject Name</th>
+          <th>Internal<br>Marks</th>
+          <th>External<br>Marks</th>
+          <th>Total</th>
+          <th>Result</th>
+          <th>Announced<br>/Updated<br>on</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>18CS81</td>
+          <td class="subname">INTERNET OF THINGS</td>
+          <td>22</td><td>21</td><td>43</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS823</td>
+          <td class="subname">NOSQL DATABASE</td>
+          <td>20</td><td>21</td><td>41</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ===== SEMESTER 7 ===== -->
+    <div class="sem-label">Semester : 7</div>
+    <table class="marks-table">
+      <thead>
+        <tr>
+          <th>Subject<br>Code</th>
+          <th>Subject Name</th>
+          <th>Internal<br>Marks</th>
+          <th>External<br>Marks</th>
+          <th>Total</th>
+          <th>Result</th>
+          <th>Announced<br>/Updated<br>on</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>18CS731</td>
+          <td class="subname">SOFTWARE ARCHITECTURE AND DESIGN PATTERNS</td>
+          <td>22</td><td>21</td><td>43</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS71</td>
+          <td class="subname">ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</td>
+          <td>21</td><td>21</td><td>42</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS72</td>
+          <td class="subname">BIG DATA ANALYTICS</td>
+          <td>22</td><td>22</td><td>44</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18BT753</td>
+          <td class="subname">FOOD, NUTRITION AND HUMAN HEALTH</td>
+          <td>20</td><td>21</td><td>41</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS744</td>
+          <td class="subname">CRYPTOGRAPHY</td>
+          <td>20</td><td>21</td><td>41</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ===== SEMESTER 6 ===== -->
+    <div class="sem-label">Semester : 6</div>
+    <table class="marks-table">
+      <thead>
+        <tr>
+          <th>Subject<br>Code</th>
+          <th>Subject Name</th>
+          <th>Internal<br>Marks</th>
+          <th>External<br>Marks</th>
+          <th>Total</th>
+          <th>Result</th>
+          <th>Announced<br>/Updated<br>on</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>18ME651</td>
+          <td class="subname">NON-CONVENTIONAL ENERGY SOURCES</td>
+          <td>20</td><td>21</td><td>41</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS61</td>
+          <td class="subname">SYSTEM SOFTWARE AND COMPILERS</td>
+          <td>22</td><td>21</td><td>43</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS62</td>
+          <td class="subname">COMPUTER GRAPHICS AND VISUALIZATION</td>
+          <td>21</td><td>22</td><td>43</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS63</td>
+          <td class="subname">WEB TECHNOLOGY AND ITS APPLICATIONS</td>
+          <td>20</td><td>21</td><td>41</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+        <tr>
+          <td>18CS644</td>
+          <td class="subname">ADVANCED JAVA AND J2EE</td>
+          <td>22</td><td>21</td><td>43</td>
+          <td class="pass">P</td><td>23-05-2026</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ABBREVIATIONS -->
+    <div class="abbr-section">
+      <div class="abbr-header">☰ ನಾಮಕರಣ / ಸಂಕ್ಷೇಪಣಗಳು &nbsp;|&nbsp; Nomenclature / Abbreviations</div>
+      <div class="abbr-row">
+        <div class="abbr-item">P -&gt; PASS</div>
+        <div class="abbr-item">F -&gt; FAIL</div>
+        <div class="abbr-item">A -&gt; ABSENT</div>
+        <div class="abbr-item">W -&gt; WITHHELD</div>
+        <div class="abbr-item">X, NE -&gt; NOT ELIGIBLE</div>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div class="notes">
+      <strong>Note :</strong>
+      <p>1) Some subject results are pending due to CIE/SEE mark issues or technical reasons and will be updated shortly.</p>
+      <p>2) Withheld results will be announced later.</p>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+      ಸಹಿ/-<br>Sd/-<br><br>
+      ಕುಲಸಚಿವರು (ಮೌಲ್ಯಮಾಪನ)<br>
+      REGISTRAR (EVALUATION)
+    </div>
+
+  </div><!-- /result-body -->
+
+  <!-- BACK / PRINT -->
+  <div class="action-btns">
+    <button class="btn-back"  onclick="window.location.href='index.php'">ಹಿಂದೆ / BACK</button>
+    <button class="btn-print" onclick="window.print()">ಮುದ್ರಣ / PRINT</button>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 ವಿನ್ಯಾಸ ಮತ್ತು ಅಭಿವೃದ್ಧಿಪಡಿಸಿದವರು ಯೋಜನಾ ನಿರ್ವಹಣೆ ವಿಭಾಗ (ಪಿ. ಎಮ್. ಸಿ), ವಿ.ತಾ.ವಿ, ಬೆಳಗಾವಿ, ಕರ್ನಾಟಕ, ಭಾರತ.<br>
+    © 2026 Designed &amp; Developed by Project Management Cell (PMC), VTU, Belagavi. Karnataka. India.
+  </div>
+
+</div><!-- /wrap -->
+</body>
+</html>

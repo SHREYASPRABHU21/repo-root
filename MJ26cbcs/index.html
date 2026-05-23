@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=980"/>
+  <title>VTU Provisional Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:Arial,sans-serif;
+      background:#e0e0e0;
+      min-height:100vh;
+      font-size:14px;
+    }
+
+    /* CENTER WRAPPER — matches original VTU narrow centered layout */
+    .wrap{
+      max-width:420px;
+      margin:0 auto;
+      background:#e0e0e0;
+    }
+
+    /* HEADER */
+    .header{
+      background:#4f4f4f;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:6px 10px;
+      gap:4px;
+    }
+    .header-left{
+      font-size:11.5px;
+      line-height:1.5;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      flex:1;
+    }
+    .header-logo{
+      width:52px;height:52px;
+      object-fit:contain;
+      flex-shrink:0;
+      display:block;
+    }
+    .header-right{
+      font-size:11px;
+      text-align:right;
+      line-height:1.5;
+      font-weight:bold;
+      flex:1;
+    }
+
+    /* ORANGE BANNER */
+    .banner-orange{
+      background:#e8956d;
+      text-align:center;
+      padding:6px 8px;
+      font-size:13px;
+      font-weight:bold;
+      color:#111;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      line-height:1.5;
+    }
+
+    /* GREEN BANNER */
+    .banner-green{
+      background:#6aaa6a;
+      text-align:center;
+      padding:5px 8px;
+      font-size:11px;
+      color:#111;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      line-height:1.6;
+    }
+
+    /* FORM CARD */
+    .form-area{
+      background:#fff;
+      margin:8px 8px;
+      padding:12px 12px 14px;
+      border:1px solid #ccc;
+      border-radius:3px;
+    }
+
+    .inp{
+      display:block;
+      width:100%;
+      border:1px solid #ccc;
+      border-radius:3px;
+      padding:7px 10px;
+      font-size:13px;
+      color:#333;
+      outline:none;
+      margin-bottom:9px;
+      background:#fff;
+    }
+    .inp::placeholder{color:#aaa;font-size:12px;}
+    .inp:focus{border-color:#999;}
+
+    /* CAPTCHA */
+    .captcha-wrap{
+      display:inline-block;
+      position:relative;
+      border:1px solid #aaa;
+      border-radius:3px;
+      background:#d8d8d8;
+      padding:4px 10px 4px 8px;
+      overflow:hidden;
+      margin-bottom:3px;
+    }
+    .cap-noise{
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      pointer-events:none;overflow:hidden;
+    }
+    .cnw{
+      position:absolute;
+      font-size:8px;
+      color:rgba(80,80,80,0.22);
+      white-space:nowrap;
+      font-family:Arial,sans-serif;
+    }
+    .cap-text{
+      position:relative;
+      font-family:'Times New Roman',Georgia,serif;
+      font-size:20px;
+      font-weight:normal;
+      letter-spacing:5px;
+      color:#111;
+      z-index:1;
+    }
+
+    .refresh-btn{
+      display:block;
+      background:none;border:none;
+      color:#1a6abf;
+      font-size:17px;
+      cursor:pointer;
+      padding:2px 0;
+      margin-bottom:11px;
+      line-height:1;
+    }
+
+    .btn-green{
+      display:block;width:100%;
+      background:#4caf50;color:#fff;
+      border:none;border-radius:4px;
+      padding:10px;font-size:14px;
+      cursor:pointer;margin-bottom:7px;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+    .btn-red{
+      display:block;width:100%;
+      background:#e06060;color:#fff;
+      border:none;border-radius:4px;
+      padding:10px;font-size:14px;
+      cursor:pointer;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+    }
+
+    .err{
+      background:#fff3f3;
+      border-left:3px solid #e53935;
+      color:#b71c1c;font-size:11px;
+      padding:6px 8px;border-radius:3px;
+      margin-bottom:9px;display:none;
+    }
+
+    /* FOOTER */
+    .footer{
+      background:#4f4f4f;
+      color:#ccc;text-align:center;
+      padding:7px 8px;font-size:10px;
+      line-height:1.7;
+      font-family:'Noto Sans Kannada',Arial,sans-serif;
+      margin-top:6px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">ವಿಶ್ವೇಶ್ವರಯ್ಯ ತಾಂತ್ರಿಕ ವಿಶ್ವವಿದ್ಯಾಲಯ<br>ಬೆಳಗಾವಿ.</div>
+    <img class="header-logo" src="https://upload.wikimedia.org/wikipedia/en/b/b3/VTU_logo.png" alt="VTU Logo"/>
+    <div class="header-right">VISVESVARAYA TECHNOLOGICAL UNIVERSITY<br>BELAGAVI.</div>
+  </div>
+
+  <!-- ORANGE BANNER -->
+  <div class="banner-orange">
+    ವಿ.ತಾ.ವಿ ಸಾಮಯಿಕ ಫಲಿತಾಂಶ<br>VTU PROVISIONAL RESULT
+  </div>
+
+  <!-- GREEN BANNER — updated dates -->
+  <div class="banner-green">
+    🕐 ಮಾರ್ಚ್-2026 / ಏಪ್ರಿಲ್-2026 ಪರೀಕ್ಷೆಯ ಫಲಿತಾಂಶ<br>
+    MARCH-2026 / APRIL-2026 EXAMINATION RESULTS
+  </div>
+
+  <!-- FORM -->
+  <div class="form-area">
+    <div class="err" id="errMsg"></div>
+
+    <input class="inp" type="text" id="usnInput" placeholder="Enter USN"
+      maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false"/>
+
+    <input class="inp" type="text" id="capInput" placeholder="Enter Captcha Code"
+      maxlength="8" autocomplete="off" spellcheck="false"/>
+
+    <div class="captcha-wrap">
+      <div class="cap-noise" id="capWords"></div>
+      <span class="cap-text" id="capText">EjsdDa</span>
+    </div>
+
+    <button class="refresh-btn" id="refreshBtn" title="Refresh Captcha">&#x21ba;</button>
+
+    <button class="btn-green" onclick="doSubmit()">ಸಲ್ಲಿಸಿ / Submit</button>
+    <button class="btn-red"   onclick="doReset()">ರದ್ದುಪಡಿಸಿ / Cancel</button>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 ವಿನ್ಯಾಸ ಮತ್ತು ಅಭಿವೃದ್ಧಿಪಡಿಸಿದವರು ಯೋಜನಾ ನಿರ್ವಹಣೆ ವಿಭಾಗ (ಪಿ. ಎಮ್. ಸಿ), ವಿ.ತಾ.ವಿ, ಬೆಳಗಾವಿ, ಕರ್ನಾಟಕ, ಭಾರತ.<br>
+    © 2026 Designed &amp; Developed by Project Management Cell (PMC), VTU, Belagavi. Karnataka. India.
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+  const POOL='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const WORDS=['NOTES','IA','CAMPUS','VALUATION','LAB','COLLEGE','MARKS','THEORY',
+               'CLASS','RESULTS','STUDENT','SAVED','JOURNAL','TECHNOLOGY','PAPER',
+               'BOOKS','HISTORY','LIBRARY','AMBER','PASS','FAIL'];
+  let cap='EjsdDa';
+
+  function mkCap(){
+    let s='';for(let i=0;i<6;i++)s+=POOL[Math.floor(Math.random()*POOL.length)];return s;
+  }
+  function renderCap(){
+    const box=document.getElementById('capWords');
+    box.innerHTML='';
+    for(let i=0;i<18;i++){
+      const s=document.createElement('span');
+      s.className='cnw';
+      s.textContent=WORDS[Math.floor(Math.random()*WORDS.length)];
+      s.style.left=(Math.random()*85)+'%';
+      s.style.top=(Math.random()*75)+'%';
+      s.style.transform='rotate('+(Math.random()*40-20)+'deg)';
+      box.appendChild(s);
+    }
+    document.getElementById('capText').textContent=cap;
+  }
+  renderCap();
+
+  document.getElementById('refreshBtn').onclick=function(){cap=mkCap();renderCap();};
+
+  function doSubmit(){
+    const usn=document.getElementById('usnInput').value.trim().toUpperCase();
+    const entered=document.getElementById('capInput').value.trim();
+    const err=document.getElementById('errMsg');
+    if(!usn){err.textContent='Please enter your USN.';err.style.display='block';return;}
+    if(entered!==cap){
+      err.textContent='Invalid captcha. Please try again.';
+      err.style.display='block';
+      cap=mkCap();renderCap();
+      document.getElementById('capInput').value='';return;
+    }
+    const valid=['1AY23CS259'];
+    if(valid.includes(usn)){
+      err.style.display='none';
+      window.location.href='result.html?usn='+usn;
+    } else {
+      err.textContent='No result found for USN: '+usn+'. Please verify.';
+      err.style.display='block';
+      cap=mkCap();renderCap();
+      document.getElementById('capInput').value='';
+    }
+  }
+  function doReset(){
+    document.getElementById('usnInput').value='';
+    document.getElementById('capInput').value='';
+    document.getElementById('errMsg').style.display='none';
+    cap=mkCap();renderCap();
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Enter')doSubmit();});
+</script>
+</body>
+</html>
