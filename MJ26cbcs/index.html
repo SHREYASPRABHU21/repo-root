@@ -268,15 +268,13 @@
       document.getElementById('capInput').value='';return;
     }
     const valid=['1AY23CS259'];
-    if(valid.includes(usn)){
-      err.style.display='none';
-      window.location.href='result.html?usn='+usn;
-    } else {
-      err.textContent='No result found for USN: '+usn+'. Please verify.';
-      err.style.display='block';
-      cap=mkCap();renderCap();
-      document.getElementById('capInput').value='';
-    }
+
+if(valid.includes(usn)){
+  err.style.display='none';
+  window.location.href='result.html?usn='+usn;
+} else {
+  window.location.href='error.html';
+}
   }
   function doReset(){
     document.getElementById('usnInput').value='';
